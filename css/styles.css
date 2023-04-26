@@ -1,0 +1,355 @@
+/*------------------------
+----------VAR DECLARATIONS
+------------------------*/
+
+
+:root{
+    
+    --accedogray:#616161;
+    --thead-text: white;
+    --tbody-text: #616161;
+    --menubackground: #FFFFFF;
+    --tbodyback-b: #eeeeee;
+
+    
+    
+}
+
+/*------------------------
+------------------NORMALIZE
+------------& GENERAL STYLE
+------------------------*/
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+   font-family: 'roboto';
+}
+
+/*------------------------
+--------------------HEADER
+------------------------*/
+.logo{
+    
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    margin-bottom: -2em;
+    margin-left: 10%;
+    
+}
+
+
+.container {
+    color:var(--accedogray);
+    font-family: 'roboto-bold';
+    display: flex;
+    margin:  20px auto;
+    justify-content: center;
+}
+
+/*------------------------
+-----------------END-HEADER
+------------------------*/
+
+/*------------------------
+--------------DATA-HANDLED
+------------------------*/
+
+.row:first-child{
+   display:flex;
+   justify-content: space-around;
+    /*Entries selection & Search box*/}
+
+.row:last-child{
+    display: flex;
+    justify-content: space-around;
+    /*Entries & pagination position*/}
+
+
+
+input[type="search"] {
+  
+    }
+
+/*.dataTables_length, .dataTables_filter{
+Class row, inner text for first & last child
+}*/
+
+.input-sm{
+    margin-left: 5px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+/*------------------------
+---------------------TABLE
+------------------------*/
+
+.table {
+    display: table;
+    font-size: 0.82em;
+    border-collapse: collapse;
+    min-width: 80%;
+    box-shadow: 0 0px 20px -5px rgba(0,0,0,0.5);
+    /*box-shadow: 0 5px 20px -7px rgba(0,0,0,0.5);*/
+    text-align:center;
+    margin: 15px auto;
+  
+    
+}
+
+.table thead tr {
+    background-color: var(--accedogray);
+    background-image: url('../img/sort-down.svg');
+    color:var(--thead-text);
+    font-family: 'roboto-bold';
+    cursor: pointer;
+    font-weight: bold;
+
+    
+}
+
+.table thead td{
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid gray;
+    
+    
+}
+
+
+.table thead td:last-child{
+    border:none;
+     border-bottom: 2px solid gray;
+   
+}
+
+.table th,
+.table td {
+    padding: 10px 15px;
+    border-right: 1px solid rgba(255, 0, 0, 0.09);
+}
+
+
+.table tbody tr {
+    font-family: 'roboto';
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color:  var(--tbodyback-b);
+    
+}
+
+.table tbody tr:last-of-type{
+    border-bottom: 2px solid var(--accedogray);
+}
+
+
+
+/*------------------------
+----------------PAGINATION
+------------------------*/
+
+.pagination {
+  /*display: inline-block;*/
+  padding-left: 0;
+  margin: -5px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  z-index: 2;
+  color: #23527c;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+/*
+  font-size: 18px;
+*/
+  line-height: 1.3333333;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+/*
+  font-size: 12px;
+*/
+  line-height: 1.5;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+/*------------------------
+----------------SORTING
+------------------------*/
+
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
+table.dataTable thead > tr > td.sorting_asc,
+table.dataTable thead > tr > td.sorting_desc,
+table.dataTable thead > tr > td.sorting {
+  padding-right: 30px;
+}
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+  outline: none;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  opacity: 0.95;
+}
+table.dataTable thead .sorting:after {
+  opacity: 0.4;
+  content: "\e150";
+  
+}
+table.dataTable thead .sorting_asc:after {
+  content: "\e155";
+}
+
+table.dataTable thead .sorting_desc:after {
+  content: "\e156";
+}
+
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+  color: #eee;
+}
+
+div.dataTables_scrollBody > table > thead .sorting:after,
+div.dataTables_scrollBody > table > thead .sorting_asc:after,
+div.dataTables_scrollBody > table > thead .sorting_desc:after {
+  display: none;
+}
+
+table.dataTable.table-condensed .sorting:after,
+table.dataTable.table-condensed .sorting_asc:after,
+table.dataTable.table-condensed .sorting_desc:after {
+  top: 6px;
+  right: 6px;
+}
+
+a[class^="ticket"]{
+    color:white;
+    text-decoration: none;
+    padding:2px 10px;
+    border-radius: 5px;
+    margin:0px;
+    
+}
+.ticket-open {
+    background:red;
+    
+}
+.ticket-closed {
+    background:#c3a7f9;
+}
+
+.ticket-other {
+    background: grey;
+}
+
+.ticketNumber:link,.ticketNumber:visited, .ticketNumber:hover,.ticketNumber:active{
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.ticket-inProgress {
+    background-color:darkviolet;
+}

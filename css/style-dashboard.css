@@ -1,0 +1,115 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+::root{
+    
+    /*Regular color*/
+    --main-bg-color:#ddd;
+    --secondary-bg-color:#66615b;
+    --main-card-color:red;
+    --txtcolor-main:red;
+    --txtcolor-secondary:red;
+    
+    /*Darkmode color*/
+    
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #6C464F;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    
+}
+
+.section-2{
+    display: flex;
+     height: 100%;
+}
+header {
+   text-align: end;
+    background-color: #6C464F;
+    padding: 3px 0;
+}
+aside {
+    width: 5%;
+    
+    background-color: #6C464F;
+}
+main {
+    width: 100%;
+     background-color: #B3CDD1;
+     flex-direction: column;
+    border-radius: 5px;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.subcontainer{
+    display:flex;
+    width: 300px;
+    height: 200px;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    align-items:center;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container-2{
+    background-color: white;
+    margin:35px;
+    height: 40%;
+}
+
+.sessionInfo{
+    color:#b3b3b3;
+}
+
+.navBara {
+    display: block;
+    text-decoration: none;
+    color:#b3b3b3;
+     padding: 15px 0px;
+    
+
+
+  
+ 
+}
+
+
+.navBarLi{
+    
+    text-align: center;
+}
+
+
+.navBara:hover {
+    background-color:#9c6572;
+    color:white;
+    cursor: pointer;
+}
+
+header{
+    padding-right: 30px;
+    
+}
+.sub-container-text{
+    font-size: 1em;
+}
